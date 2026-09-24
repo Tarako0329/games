@@ -1,0 +1,121 @@
+/*共通のCSS*/
+/*
+font-family: 'M PLUS Rounded 1c', sans-serif;
+font-family: 'Reggae One', cursive;
+font-family: 'Rowdies', cursive;
+*/
+:root {
+		/*--main-font:'Zen Kurenaido', sans-serif;*/
+		--main-font: 'Reggae One', cursive;
+		--tour-font:sans-serif;
+		--table-font:sans-serif;
+		--header-color:#9cbb1c;
+		--header-f-color:#417038;
+}
+/*点滅クラス*/
+.blink {
+	animation: blinking 0.8s ease-in-out infinite alternate;
+}
+@keyframes blinking {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+body{
+		font-family:var(--main-font);
+		font-size:13px;
+		background-color: #bbe2f1;
+}
+
+.line-green{
+		color:#1dcd00;
+}
+.facebook-blue{
+		color:#3B5998;
+}
+.twitter-blue{
+		color:#55acee;
+}
+
+.rainbow-color,
+.rainbow-color:before{
+		/*文字レインボーカラー*/
+		color: #FF8C00;
+		background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+}
+
+html{
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		font-size: 62.5%; /*ルートサイズ10px=1rem算出をしやすくするために*/
+		touch-action: manipulation; /*スマフォのダブルタップによるズームを防ぐ*/
+		background-color: #bee0ce;
+}
+header{
+		height: 65px; 
+		padding: 10px 2px; /* ヘッダーに上下左右それぞれ余白を指定 */
+		box-sizing: border-box; /* padding分を含んで幅を100%にするため */
+		width: 100%;
+		z-index: 99;
+		font-weight: 700;
+		text-align:center;
+		background-color: var(--header-color);
+		color:var(--header-f-color);
+}
+.rank_head{
+	background-color: var(--header-color);
+	color:#fff;
+}
+.mondai{
+	/*font-size:20px;*/
+	font-weight: 900;
+	color:#FF0080;
+	background-color: #f9fafa;
+	margin:0 10px;
+	letter-spacing:2px;
+	height:30px;
+}
+.kana{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-weight: 900;
+}
+.romaji{
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-weight: 900;
+	letter-spacing:3px;
+}
+.buruburu{
+	animation: hurueru .1s  infinite;
+	color:red;
+}
+select{
+	letter-spacing:2px;
+}
+@keyframes hurueru {
+	0% {transform: translate(0px, 0px) rotateZ(0deg)}
+	25% {transform: translate(2px, 2px) rotateZ(1deg)}
+	50% {transform: translate(0px, 2px) rotateZ(0deg)}
+	75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+	100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+.wrap{
+    position: fixed;
+    /*
+    top:80px;
+    left:50%;
+    transform:translateX(-50%);
+    */
+    top:140px;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+}
+
+
+
+
+
+
+
