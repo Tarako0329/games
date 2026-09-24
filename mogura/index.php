@@ -63,11 +63,12 @@
 	<div class="container" id="app">
 		<div class="row">
 			<div class="col-12 pt-5 pb-3 text-center bg-success-subtle text-success-emphasis">
+				<h1>もぐら叩こうぜ！</h1>
 				<!--ボタンを作ろう-->
 				<button class="btn btn-primary mb-3" @click='もぐら出現'>モグラ出現</button><br>
 				<button class="btn btn-primary mb-3" @click='スタート'>スタート</button>
 				<input type="number" class="form-control" v-model="プレイタイム">
-				<p>{{スコア}}</p>
+				<h3>{{スコア}}　ポイント</h3>
 			</div>
 		</div>
 		<div class="row">
@@ -77,6 +78,8 @@
 			</div>
 		</div>
 	</div>
+
+
 	<script>
 		/**
 		* 指定した範囲（下限値〜上限値）のランダムな整数を返す関数
@@ -175,7 +178,8 @@
 					console.log("callback")
 					スコア.value = newScore
 				}
-				// 指定時間（ミリ秒）待機するためのヘルパー関数
+				
+				// 指定時間（ミリ秒）待機するためのお助けツール
 				const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 				const スタート = async() =>{
@@ -187,7 +191,6 @@
 						もぐら製造機.もぐ出現(counter)
 						await sleep(間隔)
 
-						//console.log(`counter:${counter}`)
 						counter ++;
 					}
 					console.log("おわり")
